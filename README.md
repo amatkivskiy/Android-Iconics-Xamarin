@@ -1,8 +1,8 @@
 # Android-Iconics-Xamarin
-Xamarin bindings for https://github.com/mikepenz/Android-Iconics
+Xamarin bindings for [Android-Iconics](https://github.com/mikepenz/Android-Iconics)  library.
 
-#Issues
-At the moment the only issue is that you have to copy fonts from library's assets folder to you app project assets folder.
+#How to use
+All code samples can be taken from original java repository.
 
 # Download
 [NuGet Package](https://www.nuget.org/packages/Mikepenz.Android.Iconics.Xamarin.Binding/)
