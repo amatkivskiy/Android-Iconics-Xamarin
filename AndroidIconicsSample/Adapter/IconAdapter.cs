@@ -1,14 +1,13 @@
-namespace AndroidIconicsSample
+namespace AndroidIconicsSample.Adapter
 {
-  using Android.Support.V7.Widget;
   using System.Collections.Generic;
+  using Android.Support.V7.Widget;
   using Android.View;
   using Android.Views;
   using Android.Widget;
 
   public class IconAdapter : RecyclerView.Adapter
   {
-
     private List<string> icons;
     private int rowLayout;
 
@@ -18,47 +17,47 @@ namespace AndroidIconicsSample
       this.rowLayout = rowLayout;
     }
 
-    public void SetIcons(List<string> icons)
+    public void setIcons(List<string> icons)
     {
       this.icons.AddRange(icons);
-      this.NotifyDataSetChanged();
+      this.NotifyItemRangeChanged(0, icons.Count - 1);
     }
 
     public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
     {
       var icon = this.icons[position];
+      var viewHolder = holder as CustomViewHolder;
 
-      var vh = holder as ViewHolder;
-
-      vh.Image.SetIcon(icon);
-      vh.Name.Text = icon;
+      viewHolder.Image.SetIcon(icon);
+      viewHolder.Name.Text = icon;
     }
 
     public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
     {
       View v = LayoutInflater.From(parent.Context).Inflate(this.rowLayout, parent, false);
-      return new ViewHolder(v);
+      return new CustomViewHolder(v);
     }
 
     public override int ItemCount
     {
       get
       {
-        return this.icons == null ? 0 : this.icons.Count;
+        return this.icons.Count;
       }
     }
   }
 
-  public class ViewHolder : RecyclerView.ViewHolder
+  public class CustomViewHolder : RecyclerView.ViewHolder
   {
-    public TextView Name { get; private set; }
-    public IconicsImageView Image { get; private set; }
+    public TextView Name;
+    public IconicsImageView Image;
 
-    public ViewHolder(View itemView)
+    public CustomViewHolder(View itemView)
       : base(itemView)
     {
       this.Name = itemView.FindViewById<TextView>(Resource.Id.name);
       this.Image = itemView.FindViewById<IconicsImageView>(Resource.Id.icon);
     }
+
   }
 }

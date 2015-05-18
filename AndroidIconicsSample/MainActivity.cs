@@ -1,45 +1,118 @@
-﻿using Com.Mikepenz.Google_material_typeface_library;
+using Android.App;
 
 namespace AndroidIconicsSample
 {
-  using Android.App;
-  using Android.OS;
-  using Com.Mikepenz.Iconics;
-  using Android.Support.V7.Widget;
+  using System;
   using System.Collections.Generic;
+  using System.Linq;
+  using Android.Graphics;
+  using Android.Support.V7.App;
+  using Android.OS;
+  using Android.Support.V4.App;
+  using Android.Support.V7.Widget;
+  using Android.Views;
+  using Android.Widget;
+  using Com.Mikepenz.Iconics;
+  using Com.Mikepenz.Iconics.Typeface;
+  using Com.Mikepenz.Materialdrawer;
+  using Com.Mikepenz.Materialdrawer.Model;
+  using Com.Mikepenz.Materialdrawer.Model.Interfaces;
+  using Toolbar = Android.Support.V7.Widget.Toolbar;
 
-  [Activity(Label = "AndroidIconicsSample", MainLauncher = true, Icon = "@drawable/icon")]
-  public class MainActivity : Activity
+  [Activity(MainLauncher = true)]
+  class MainActivity : ActionBarActivity
   {
-    private const string FontName = "Google Material Design";
-    private readonly List<string> icons = new List<string>();
-
-    protected override void OnCreate(Bundle bundle)
+    protected override void OnCreate(Bundle savedInstanceState)
     {
-      base.OnCreate(bundle);
+      base.OnCreate(savedInstanceState);
+      SetContentView(Resource.Layout.activity_main);
 
-      // Set our view from the "main" layout resource
-      this.SetContentView(Resource.Layout.Main);
+      Toolbar toolbar = this.FindViewById<Toolbar>(Resource.Id.toolbar);
+      this.SetSupportActionBar(toolbar);
+      this.SupportActionBar.SetDisplayHomeAsUpEnabled(false);
 
-      // Init and Setup RecyclerView
-      var recyclerView = this.FindViewById<RecyclerView>(Resource.Id.list);
-      recyclerView.SetLayoutManager(new GridLayoutManager(this, 2));
+      List<IDrawerItem> items = new List<IDrawerItem>(Iconics.RegisteredFonts.Count);
 
-      IconAdapter mAdapter = new IconAdapter(new List<string>(), Resource.Layout.row_icon);
-      recyclerView.SetAdapter(mAdapter);
-      foreach (var registeredFont in Iconics.RegisteredFonts)
+      foreach (var font in Iconics.RegisteredFonts)
       {
-        if(registeredFont.Icons != null)
-        {
-          foreach (var icon in registeredFont.Icons)
-          {
-            this.icons.Add(icon);
-          }
-        }
+        var item = new PrimaryDrawerItem();
+
+        item.WithName(font.FontName);
+        items.Add(item);
       }
-      mAdapter.SetIcons(this.icons);
+
+      new Drawer().WithActivity(this)
+              .WithToolbar(toolbar)
+              .WithDrawerItems(items)
+              .WithOnDrawerItemClickListener(new DrawerListener(this))
+              .WithFireOnInitialOnClick(true)
+              .WithSelectedItem(0)
+              .Build();
+    }
+
+    public override bool OnCreateOptionsMenu(IMenu menu)
+    {
+      this.MenuInflater.Inflate(Resource.Menu.menu_main, menu);
+
+      var menuItem = menu.FindItem(Resource.Id.action_opensource);
+
+      menuItem.SetIcon(new IconicsDrawable(this, FontAwesome.Icon.FawGithub).ActionBarSize().Color(Color.White));
+
+      return base.OnCreateOptionsMenu(menu);
+    }
+
+    public override bool OnOptionsItemSelected(IMenuItem item)
+    {
+      switch (item.ItemId)
+      {
+
+//        case Resource.Id..:
+//          //      TODO: Add open libraries support.
+//          //                    new .Builder()
+//          //                            .withFields(R.string.class.getFields())
+//          //                            .withLicenseShown(true)
+//          //                            .withActivityTitle(getString(R.string.action_opensource))
+//          //                            .withActivityTheme(R.style.AppTheme)
+//          //                            .start(MainActivity.this);
+//
+//          return true;
+        case Resource.Id.action_playground:
+          this.StartActivity(typeof(PlaygroundActivity));
+          return true;
+
+        default:
+          return base.OnOptionsItemSelected(item);
+      }
+    }
+
+    void LoadIcons(string fontName)
+    {
+      FragmentTransaction ft = this.SupportFragmentManager.BeginTransaction();
+      ft.Replace(Resource.Id.content, IconsFragment.NewInstance(fontName));
+      ft.Commit();
+    }
+
+    class DrawerListener : Java.Lang.Object, Drawer.IOnDrawerItemClickListener
+    {
+      MainActivity activity;
+
+      public DrawerListener(MainActivity activity)
+      {
+        this.activity = activity;
+      }
+
+      public new void Dispose()
+      {
+        this.activity = null;
+      }
+
+      public void OnItemClick(AdapterView adapterView, View view, int position, long l, IDrawerItem drawerItem)
+      {
+        var font = Iconics.RegisteredFonts.ElementAt(position);
+
+        this.activity.LoadIcons(font.FontName);
+        this.activity.SupportActionBar.Title = font.FontName;
+      }
     }
   }
 }
-
-
