@@ -1,15 +1,11 @@
-using Android.App;
-
 namespace AndroidIconicsSample
 {
-  using System;
   using System.Collections.Generic;
   using System.Linq;
+  using Android.App;
   using Android.Graphics;
   using Android.Support.V7.App;
   using Android.OS;
-  using Android.Support.V4.App;
-  using Android.Support.V7.Widget;
   using Android.Views;
   using Android.Widget;
   using Com.Mikepenz.Iconics;
@@ -87,7 +83,7 @@ namespace AndroidIconicsSample
 
     void LoadIcons(string fontName)
     {
-      FragmentTransaction ft = this.SupportFragmentManager.BeginTransaction();
+      Android.Support.V4.App.FragmentTransaction ft = this.SupportFragmentManager.BeginTransaction();
       ft.Replace(Resource.Id.content, IconsFragment.NewInstance(fontName));
       ft.Commit();
     }

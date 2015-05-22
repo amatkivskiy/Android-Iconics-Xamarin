@@ -57,11 +57,11 @@
     <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
       <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
     </Reference>
-    <Reference Include="android-iconics-0.9.1.2">
-      <HintPath>..\packages\Mikepenz.Android.Iconics.Xamarin.Binding.0.9.1.2\lib\MonoAndroid\android-iconics-0.9.1.2.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Support.v7.CardView">
       <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="android-iconics-0.9.1.2">
+      <HintPath>..\packages\Mikepenz.Android.Iconics.Xamarin.Binding.0.9.1.2\lib\MonoAndroid\android-iconics-0.9.1.2.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -69,6 +69,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Adapter\IconAdapter.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Typeface\CustomFont.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml">
@@ -96,7 +97,6 @@
     <AndroidResource Include="Resources\layout\row_icon.xml" />
     <AndroidResource Include="Resources\values\dimens.xml" />
     <AndroidResource Include="Resources\values\styles.xml" />
-    <None Include="Typeface\CustomFont.java" />
     <Compile Include="PlaygroundActivity.cs" />
     <Compile Include="CustomApplication.cs" />
     <None Include="packages.config" />
