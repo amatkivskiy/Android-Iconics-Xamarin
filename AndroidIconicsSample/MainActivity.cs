@@ -1,18 +1,19 @@
+using Com.Mikepenz.Iconics;
+using Com.Mikepenz.Iconics.Typeface;
+using Com.Mikepenz.Materialdrawer.Model.Interfaces;
+using System.Collections.Generic;
+using Com.Mikepenz.Materialdrawer.Model;
+using Com.Mikepenz.Materialdrawer;
+using Android.Widget;
+using System.Linq;
+
 namespace AndroidIconicsSample
 {
-  using System.Collections.Generic;
-  using System.Linq;
   using Android.App;
   using Android.Graphics;
   using Android.Support.V7.App;
   using Android.OS;
   using Android.Views;
-  using Android.Widget;
-  using Com.Mikepenz.Iconics;
-  using Com.Mikepenz.Iconics.Typeface;
-  using Com.Mikepenz.Materialdrawer;
-  using Com.Mikepenz.Materialdrawer.Model;
-  using Com.Mikepenz.Materialdrawer.Model.Interfaces;
   using Toolbar = Android.Support.V7.Widget.Toolbar;
 
   [Activity(MainLauncher = true)]
@@ -37,12 +38,12 @@ namespace AndroidIconicsSample
         items.Add(item);
       }
 
-      new Drawer().WithActivity(this)
+      new DrawerBuilder().WithActivity(this)
               .WithToolbar(toolbar)
               .WithDrawerItems(items)
               .WithOnDrawerItemClickListener(new DrawerListener(this))
               .WithFireOnInitialOnClick(true)
-              .WithSelectedItem(0)
+              .WithSelectedItem(1)
               .Build();
     }
 
@@ -97,17 +98,14 @@ namespace AndroidIconicsSample
         this.activity = activity;
       }
 
-      public new void Dispose()
-      {
-        this.activity = null;
-      }
-
-      public void OnItemClick(AdapterView adapterView, View view, int position, long l, IDrawerItem drawerItem)
+      public bool OnItemClick(AdapterView adapterView, View view, int position, long l, IDrawerItem drawerItem)
       {
         var font = Iconics.RegisteredFonts.ElementAt(position);
 
         this.activity.LoadIcons(font.FontName);
         this.activity.SupportActionBar.Title = font.FontName;
+
+        return false;
       }
     }
   }

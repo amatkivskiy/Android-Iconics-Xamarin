@@ -2,9 +2,9 @@ namespace AndroidIconicsSample.Adapter
 {
   using System.Collections.Generic;
   using Android.Support.V7.Widget;
-  using Android.View;
   using Android.Views;
   using Android.Widget;
+  using Com.Mikepenz.Iconics.View;
 
   public class IconAdapter : RecyclerView.Adapter
   {
