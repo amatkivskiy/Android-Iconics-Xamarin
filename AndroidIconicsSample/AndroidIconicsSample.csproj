@@ -18,6 +18,7 @@
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <ReleaseVersion>1.0.1</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,9 +46,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="material-drawer">
-      <HintPath>..\..\MaterialDrawer-Xamarin\MaterialDrawer\bin\Debug\material-drawer.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>..\packages\Xamarin.Android.Support.v4.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
@@ -60,8 +58,8 @@
     <Reference Include="Xamarin.Android.Support.v7.CardView">
       <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
     </Reference>
-    <Reference Include="android-iconics-0.9.1.2">
-      <HintPath>..\packages\Mikepenz.Android.Iconics.Xamarin.Binding.0.9.1.2\lib\MonoAndroid\android-iconics-0.9.1.2.dll</HintPath>
+    <Reference Include="material-drawer-3.0.0">
+      <HintPath>Libs\material-drawer-3.0.0.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -103,7 +101,7 @@
     <AndroidResource Include="Resources\values\strings.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <None Include="libs\material-drawer.dll" />
+    <None Include="Libs\material-drawer-3.0.0.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -123,5 +121,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IconsFragment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\library\library.csproj">
+      <Project>{3FB2A58D-1C49-4572-8F18-CE36B7EC108E}</Project>
+      <Name>library</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
