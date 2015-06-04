@@ -38,6 +38,7 @@
         }
         catch (Exception e)
         {
+          Log.Error("Iconics", "Failed to load font from Assets: " + e.Message);
         }
       }
       return _typeface;
