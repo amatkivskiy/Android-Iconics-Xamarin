@@ -1,28 +1,27 @@
-using Com.Mikepenz.Iconics;
-using Com.Mikepenz.Iconics.Typeface;
-using Com.Mikepenz.Materialdrawer.Model.Interfaces;
-using System.Collections.Generic;
-using Com.Mikepenz.Materialdrawer.Model;
-using Com.Mikepenz.Materialdrawer;
-using Android.Widget;
-using System.Linq;
-
 namespace AndroidIconicsSample
 {
+  using System.Collections.Generic;
+  using System.Linq;
   using Android.App;
   using Android.Graphics;
   using Android.Support.V7.App;
   using Android.OS;
   using Android.Views;
+  using Android.Widget;
+  using Com.Mikepenz.Iconics;
+  using Com.Mikepenz.Iconics.Typeface;
+  using Com.Mikepenz.Materialdrawer;
+  using Com.Mikepenz.Materialdrawer.Model;
+  using Com.Mikepenz.Materialdrawer.Model.Interfaces;
   using Toolbar = Android.Support.V7.Widget.Toolbar;
 
-  [Activity(MainLauncher = true)]
-  class MainActivity : ActionBarActivity
+  [Activity(MainLauncher = true, Label = "@string/app_name")]
+  class MainActivity : AppCompatActivity
   {
     protected override void OnCreate(Bundle savedInstanceState)
     {
       base.OnCreate(savedInstanceState);
-      SetContentView(Resource.Layout.activity_main);
+      this.SetContentView(Resource.Layout.activity_main);
 
       Toolbar toolbar = this.FindViewById<Toolbar>(Resource.Id.toolbar);
       this.SetSupportActionBar(toolbar);
@@ -91,7 +90,7 @@ namespace AndroidIconicsSample
 
     class DrawerListener : Java.Lang.Object, Drawer.IOnDrawerItemClickListener
     {
-      MainActivity activity;
+      readonly MainActivity activity;
 
       public DrawerListener(MainActivity activity)
       {

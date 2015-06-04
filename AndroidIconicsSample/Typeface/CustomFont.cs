@@ -11,14 +11,9 @@
   {
     const string TtfFile = "fontello.ttf";
 
-    static Typeface typeface = null;
+    static Typeface _typeface = null;
 
-    static Dictionary<string, Java.Lang.Character> chars;
-
-    public override string ToString()
-    {
-      return string.Format("[CustomFontO: TtfFile={0}, typeface={1}, chars={2}, Characters={3}, Author={4}, Description={5}, FontName={6}, IconCount={7}, Icons={8}, License={9}, LicenseUrl={10}, MappingPrefix={11}, Url={12}, Version={13}]", TtfFile, typeface, chars, Characters, Author, Description, FontName, IconCount, Icons, License, LicenseUrl, MappingPrefix, Url, Version);
-    }
+    static Dictionary<string, Java.Lang.Character> _chars;
 
     public IIcon GetIcon(string key)
     {
@@ -29,24 +24,23 @@
     {
       get
       {
-        return chars ?? (chars = Icon.Values.ToDictionary(icon => icon.Name, icon => new Java.Lang.Character(icon.Character)));
+        return _chars ?? (_chars = Icon.Values.ToDictionary(icon => icon.Name, icon => new Java.Lang.Character(icon.Character)));
       }
     }
 
     public Typeface GetTypeface(Android.Content.Context context)
     {
-      if (typeface == null)
+      if (_typeface == null)
       {
         try
         {
-          typeface = Typeface.CreateFromAsset(context.Assets, "fonts/" + TtfFile);
+          _typeface = Typeface.CreateFromAsset(context.Assets, "fonts/" + TtfFile);
         }
         catch (Exception e)
         {
-          Log.Error("Iconics", e.Message);
         }
       }
-      return typeface;
+      return _typeface;
     }
 
     public string Author
@@ -77,7 +71,7 @@
     {
       get
       {
-        return chars.Count;
+        return _chars.Count;
       }
     }
 
