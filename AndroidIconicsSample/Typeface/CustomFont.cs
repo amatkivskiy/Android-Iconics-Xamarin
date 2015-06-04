@@ -123,11 +123,6 @@
         return "";
       }
     }
-
-    public void Dispose()
-    {
-//      throw new System.NotImplementedException();
-    }
   }
 
   public class Icon : Java.Lang.Object, IIcon
