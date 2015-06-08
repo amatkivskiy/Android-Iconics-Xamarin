@@ -74,6 +74,6 @@
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\iconics-1.0.1.aar" />
+    <LibraryProjectZip Include="Jars\iconics-1.0.2.aar" />
   </ItemGroup>
 </Project>
