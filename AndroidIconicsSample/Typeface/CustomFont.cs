@@ -17,7 +17,7 @@
 
     public IIcon GetIcon(string key)
     {
-      return Icon.Values.Find(icon => icon.Name.Equals(key));
+      return Icon.Values.ToList().Find(icon => icon.Name.Equals(key));
     }
 
     public IDictionary<string, Java.Lang.Character> Characters
@@ -123,64 +123,62 @@
         return "";
       }
     }
-  }
 
-  public class Icon : Java.Lang.Object, IIcon
-  {
-    readonly char character;
-    readonly string name;
-
-    static ITypeface _typeFace;
-
-    public Icon(char character, string name)
+    public class Icon : Java.Lang.Object, IIcon
     {
-      this.character = character;
-      this.name = name;
-    }
+      private readonly char character;
+      private readonly string name;
 
-    public static List<Icon> Values
-    {
-      get
+      private static ITypeface _typeFace;
+
+      public Icon(char character, string name)
       {
-        var list = new List<Icon>
+        this.character = character;
+        this.name = name;
+      }
+
+      public char Character
+      {
+        get
         {
-          new Icon('\ue800', "fon_test1"),
-          new Icon('\ue801', "fon_test2")
-        };
-
-        return list;
+          return this.character;
+        }
       }
-    }
 
-    public char Character
-    {
-      get
+      public string FormattedName
       {
-        return this.character;
+        get
+        {
+          return "{" + this.name + "}";
+        }
       }
-    }
 
-    public string FormattedName
-    {
-      get
+      public string Name
       {
-        return "{" + this.name + "}";
+        get
+        {
+          return this.name;
+        }
       }
-    }
 
-    public string Name
-    {
-      get
+      public ITypeface Typeface
       {
-        return this.name;
+        get
+        {
+          return _typeFace ?? (_typeFace = new CustomFont());
+        }
       }
-    }
 
-    public ITypeface Typeface
-    {
-      get
+      public static readonly Icon FontTest1 = new Icon('\ue800', "fon_test1");
+      public static readonly Icon FontTest2 = new Icon('\ue801', "fon_test2");
+
+      public static IEnumerable<Icon> Values
       {
-        return _typeFace ?? (_typeFace = new CustomFont());
+        get
+        {
+          yield return FontTest1;
+          yield return FontTest2;
+        }
       }
     }
   }
