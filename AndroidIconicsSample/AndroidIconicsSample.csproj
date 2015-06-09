@@ -72,8 +72,6 @@
     <Compile Include="Typeface\CustomFont.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\fonts\meteocons.ttf" />
-    <AndroidAsset Include="Assets\fonts\octicons.ttf" />
     <None Include="Properties\AndroidManifest.xml">
       <SubType>Designer</SubType>
     </None>
@@ -110,6 +108,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Assets\fonts\" />
   </ItemGroup>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -119,12 +118,6 @@
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
   <ItemGroup>
-    <AndroidAsset Include="Assets\fonts\fontello.ttf" />
-    <AndroidAsset Include="Assets\fonts\fontawesome-webfont-4.3.0.ttf" />
-    <AndroidAsset Include="Assets\fonts\google_material_design.ttf" />
-    <AndroidAsset Include="Assets\fonts\materialdesignicons-webfont.ttf" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="IconsFragment.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -132,5 +125,22 @@
       <Project>{3FB2A58D-1C49-4572-8F18-CE36B7EC108E}</Project>
       <Name>library</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="..\fonts\fontawesome-webfont-4.3.0.ttf">
+      <Link>Assets\fonts\fontawesome-webfont-4.3.0.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\fonts\google_material_design.ttf">
+      <Link>Assets\fonts\google_material_design.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\fonts\materialdesignicons-webfont.ttf">
+      <Link>Assets\fonts\materialdesignicons-webfont.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\fonts\meteocons.ttf">
+      <Link>Assets\fonts\meteocons.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\fonts\octicons.ttf">
+      <Link>Assets\fonts\octicons.ttf</Link>
+    </AndroidAsset>
   </ItemGroup>
 </Project>
