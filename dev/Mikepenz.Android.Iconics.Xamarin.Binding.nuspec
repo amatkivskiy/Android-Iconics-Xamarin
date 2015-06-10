@@ -4,7 +4,7 @@
 		<!-- prefer rather Mikepenz.Iconics.Xamarin.Android then this id in future -->
 		<id>Mikepenz.Android.Iconics.Xamarin.Binding</id>
 		<version>1.0.2</version>
-		<title>Android-Iconicis</title>
+		<title>Android-Iconics</title>
 		<authors>Andriy Matkivskiy</authors>
 		<owners>amatkivskiy</owners>
 		<projectUrl>https://github.com/amatkivskiy/Android-Iconics-Xamarin</projectUrl>
