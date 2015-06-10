@@ -4,7 +4,7 @@
 		<!-- prefer rather Mikepenz.Iconics.Xamarin.Android then this id in future -->
 		<id>Mikepenz.Android.Iconics.Xamarin.Binding</id>
 		<version>1.0.2</version>
-		<title>Android-Iconcis</title>
+		<title>Android-Iconicis</title>
 		<authors>Andriy Matkivskiy</authors>
 		<owners>amatkivskiy</owners>
 		<projectUrl>https://github.com/amatkivskiy/Android-Iconics-Xamarin</projectUrl>
@@ -25,7 +25,7 @@ http://mikepenz.github.io/Android-Iconics</description>
 		</dependencies>
 	</metadata>
 	<files>
-		<file src="library\bin\Release\android-iconics-1.0.2.dll" target="lib\MonoAndroid\"/>
+		<file src="..\library\bin\Release\android-iconics-1.0.2.dll" target="lib\MonoAndroid\"/>
 		<file src="fonts\google_material_design.ttf" target="content\Assets\fonts\" />
 		<file src="fonts\fontawesome-webfont-4.3.0.ttf" target="content\Assets\fonts\" />
 		<file src="fonts\materialdesignicons-webfont.ttf" target="content\Assets\fonts\" />

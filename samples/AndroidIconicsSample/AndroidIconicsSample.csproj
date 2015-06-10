@@ -48,20 +48,20 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="Xamarin.Android.Support.v4">
-      <HintPath>..\packages\Xamarin.Android.Support.v4.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.CardView">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
-    </Reference>
     <Reference Include="material-drawer-3.0.3">
       <HintPath>Libs\material-drawer-3.0.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v4.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.AppCompat.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.CardView.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.RecyclerView.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -99,49 +99,42 @@
     <AndroidResource Include="Resources\values\styles.xml" />
     <Compile Include="PlaygroundActivity.cs" />
     <Compile Include="CustomApplication.cs" />
-    <None Include="packages.config" />
     <AndroidResource Include="Resources\values\strings.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <None Include="Libs\material-drawer-3.0.3.dll" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Resources\drawable-mdpi\" />
     <Folder Include="Assets\fonts\" />
   </ItemGroup>
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-  </Target>
   <ItemGroup>
     <Compile Include="IconsFragment.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\library\library.csproj">
+    <ProjectReference Include="..\..\library\library.csproj">
       <Project>{3FB2A58D-1C49-4572-8F18-CE36B7EC108E}</Project>
       <Name>library</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="..\fonts\fontawesome-webfont-4.3.0.ttf">
+    <AndroidAsset Include="Assets\fonts\fontello.ttf" />
+    <AndroidAsset Include="..\..\dev\fonts\fontawesome-webfont-4.3.0.ttf">
       <Link>Assets\fonts\fontawesome-webfont-4.3.0.ttf</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\fonts\google_material_design.ttf">
+    <AndroidAsset Include="..\..\dev\fonts\google_material_design.ttf">
       <Link>Assets\fonts\google_material_design.ttf</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\fonts\materialdesignicons-webfont.ttf">
+    <AndroidAsset Include="..\..\dev\fonts\materialdesignicons-webfont.ttf">
       <Link>Assets\fonts\materialdesignicons-webfont.ttf</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\fonts\meteocons.ttf">
+    <AndroidAsset Include="..\..\dev\fonts\meteocons.ttf">
       <Link>Assets\fonts\meteocons.ttf</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\fonts\octicons.ttf">
+    <AndroidAsset Include="..\..\dev\fonts\octicons.ttf">
       <Link>Assets\fonts\octicons.ttf</Link>
     </AndroidAsset>
-    <AndroidAsset Include="Assets\fonts\fontello.ttf" />
   </ItemGroup>
 </Project>
