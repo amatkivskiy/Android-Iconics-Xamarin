@@ -18,7 +18,7 @@
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
-    <ReleaseVersion>1.0.1</ReleaseVersion>
+    <ReleaseVersion>1.0.2</ReleaseVersion>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -60,8 +60,8 @@
     <Reference Include="Xamarin.Android.Support.v7.CardView">
       <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
     </Reference>
-    <Reference Include="material-drawer-3.0.0">
-      <HintPath>Libs\material-drawer-3.0.0.dll</HintPath>
+    <Reference Include="material-drawer-3.0.3">
+      <HintPath>Libs\material-drawer-3.0.3.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -103,7 +103,7 @@
     <AndroidResource Include="Resources\values\strings.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <None Include="Libs\material-drawer-3.0.0.dll" />
+    <None Include="Libs\material-drawer-3.0.3.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
