@@ -1,29 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
+		<!-- prefer rather Mikepenz.Iconics.Xamarin.Android then this id in future -->
 		<id>Mikepenz.Android.Iconics.Xamarin.Binding</id>
-		<version>0.9.1.2</version>
-		<title>Xamarin binding for Mikepenz's Android-Iconics</title>
-		<authors>amatkivskiy</authors>
+		<version>1.0.2</version>
+		<title>Android-Iconcis</title>
+		<authors>Andriy Matkivskiy</authors>
 		<owners>amatkivskiy</owners>
 		<projectUrl>https://github.com/amatkivskiy/Android-Iconics-Xamarin</projectUrl>
 		<iconUrl>https://raw.githubusercontent.com/mikepenz/Android-Iconics/master/DEV/icon/icon.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		        <description>C# bindings for Android Iconics library.
+		<description>C# bindings for Android-Iconics library.
 
 Android-Iconics is a library to use (almost) any alternative iconfont in your projects. It allows you to add any Android-Iconics compatible typeface-library-addon to your project and you are able to start using that font.
 http://mikepenz.github.io/Android-Iconics</description>
 		<summary>Xamarin binding for Android Iconics https://github.com/mikepenz/Android-Iconics</summary>
 		<tags>Android Xamarin Icons Material</tags>
-		<releaseNotes>Fixed bug with missing classes in .dll.</releaseNotes>
+		<releaseNotes>Updated to version 1.0.2.
+			Merged all addon fonts into main library. 
+		</releaseNotes>
 		<dependencies>
 			<dependency id="Xamarin.Android.Support.v4" version="22.1.1.1"/>
 			<dependency id="Xamarin.Android.Support.v7.AppCompat" version="22.1.1.1"/>
 		</dependencies>
 	</metadata>
 	<files>
-		<file src="library\bin\Release\android-iconics-0.9.1.2.dll" target="lib\MonoAndroid\"/>
+		<file src="library\bin\Release\android-iconics-1.0.2.dll" target="lib\MonoAndroid\"/>
 		<file src="fonts\google_material_design.ttf" target="content\Assets\fonts\" />
 		<file src="fonts\fontawesome-webfont-4.3.0.ttf" target="content\Assets\fonts\" />
+		<file src="fonts\materialdesignicons-webfont.ttf" target="content\Assets\fonts\" />
+		<file src="fonts\meteocons.ttf" target="content\Assets\fonts\" />
+		<file src="fonts\octicons.ttf" target="content\Assets\fonts\" />
 	</files>
 </package>
