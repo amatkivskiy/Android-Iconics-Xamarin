@@ -9,7 +9,7 @@ namespace AndroidIconicsSample
   using Com.Mikepenz.Meteocons_typeface_library;
   using Com.Mikepenz.Octicons_typeface_library;
 
-  [Application(Theme = "@style/MaterialDrawerTheme.Light.DarkToolbar")]
+  [Application(Theme = "@style/AppTheme")]
   public class CustomApplication : Application
   {
     public CustomApplication(IntPtr handle, JniHandleOwnership ownerShip)
