@@ -21,13 +21,13 @@ if %errorlevel% neq 0 goto :nuget_package_error
 goto :success
 
 :sample_build_error
-echo Failed to build sample project.
+echo "Failed to build sample project."
 exit /b %errorlevel%
 
 :nuget_package_error
-echo Failed to create nuget package.
+echo "Failed to create nuget package."
 exit /b %errorlevel%
 
 :success
-echo "Successfully build project."
+echo "Successfully built project."
 
