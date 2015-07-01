@@ -1,10 +1,10 @@
-﻿namespace Com.Mikepenz.Octicons_typeface_library
+﻿namespace Mikepenz.Octicons_typeface_library
 {
   using System;
   using System.Collections.Generic;
   using System.Linq;
   using Android.Util;
-  using Com.Mikepenz.Iconics.Typeface;
+  using Mikepenz.Iconics.Typeface;
 
   public class Octicons : Java.Lang.Object, ITypeface
   {

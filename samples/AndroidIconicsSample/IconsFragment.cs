@@ -6,7 +6,7 @@ namespace AndroidIconicsSample
   using Android.Support.V7.Widget;
   using Android.Views;
   using AndroidIconicsSample.Adapter;
-  using Com.Mikepenz.Iconics;
+  using Mikepenz.Iconics;
 
   public class IconsFragment : Fragment
   {
@@ -55,7 +55,7 @@ namespace AndroidIconicsSample
               {
                 this.icons.Add(icon);
               }
-              adapter.setIcons(this.icons);
+              adapter.SetIcons(this.icons);
               break;
             }
           }

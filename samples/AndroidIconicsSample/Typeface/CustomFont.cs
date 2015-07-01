@@ -5,7 +5,7 @@
   using System.Linq;
   using Android.Graphics;
   using Android.Util;
-  using Com.Mikepenz.Iconics.Typeface;
+  using Mikepenz.Iconics.Typeface;
 
   public class CustomFont : Java.Lang.Object, ITypeface
   {

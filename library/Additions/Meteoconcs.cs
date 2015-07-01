@@ -1,10 +1,10 @@
-namespace Com.Mikepenz.Meteocons_typeface_library
+namespace Mikepenz.Meteocons_typeface_library
 {
   using System;
   using System.Collections.Generic;
   using System.Linq;
   using Android.Util;
-  using Com.Mikepenz.Iconics.Typeface;
+  using Mikepenz.Iconics.Typeface;
 
   public class Meteoconcs : Java.Lang.Object, ITypeface
   {

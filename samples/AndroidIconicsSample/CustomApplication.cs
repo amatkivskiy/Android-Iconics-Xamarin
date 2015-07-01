@@ -4,10 +4,10 @@ namespace AndroidIconicsSample
   using Android.App;
   using Android.Runtime;
   using AndroidIconicsSample.Typeface;
-  using Com.Mikepenz.Iconics;
-  using Com.Mikepenz.Community_material_typeface_library;
-  using Com.Mikepenz.Meteocons_typeface_library;
-  using Com.Mikepenz.Octicons_typeface_library;
+  using Mikepenz.Iconics;
+  using Mikepenz.Community_material_typeface_library;
+  using Mikepenz.Meteocons_typeface_library;
+  using Mikepenz.Octicons_typeface_library;
 
   [Application(Theme = "@style/AppTheme")]
   public class CustomApplication : Application

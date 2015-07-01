@@ -8,11 +8,11 @@ namespace AndroidIconicsSample
   using Android.OS;
   using Android.Views;
   using Android.Widget;
-  using Com.Mikepenz.Iconics;
-  using Com.Mikepenz.Iconics.Typeface;
-  using Com.Mikepenz.Materialdrawer;
-  using Com.Mikepenz.Materialdrawer.Model;
-  using Com.Mikepenz.Materialdrawer.Model.Interfaces;
+  using Mikepenz.Iconics;
+  using Mikepenz.Iconics.Typeface;
+  using Mikepenz.MaterialDrawer;
+  using Mikepenz.MaterialDrawer.Models;
+  using Mikepenz.MaterialDrawer.Models.Interfaces;
   using Toolbar = Android.Support.V7.Widget.Toolbar;
 
   [Activity(MainLauncher = true, Label = "@string/app_name")]
@@ -52,7 +52,7 @@ namespace AndroidIconicsSample
 
       var menuItem = menu.FindItem(Resource.Id.action_opensource);
 
-      menuItem.SetIcon(new IconicsDrawable(this, FontAwesome.Icon.FawGithub).ActionBarSize().Color(Color.White));
+      menuItem.SetIcon(new IconicsDrawable(this, FontAwesome.Icon.FawGithub).SizeDp(48).Color(Color.White));
 
       return base.OnCreateOptionsMenu(menu);
     }
