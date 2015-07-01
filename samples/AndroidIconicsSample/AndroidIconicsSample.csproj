@@ -137,6 +137,5 @@
     <AndroidAsset Include="..\..\dev\fonts\octicons.ttf">
       <Link>Assets\fonts\octicons.ttf</Link>
     </AndroidAsset>
-    <AndroidAsset Include="Assets\fonts\icomoon.ttf" />
   </ItemGroup>
 </Project>
