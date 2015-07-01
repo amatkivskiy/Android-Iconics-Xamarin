@@ -6,8 +6,8 @@ namespace AndroidIconicsSample
   using Android.Text;
   using Android.Text.Style;
   using Android.Widget;
-  using Com.Mikepenz.Iconics;
-  using Com.Mikepenz.Iconics.Typeface;
+  using Mikepenz.Iconics;
+  using Mikepenz.Iconics.Typeface;
 
   [Activity]
   public class PlaygroundActivity : Activity

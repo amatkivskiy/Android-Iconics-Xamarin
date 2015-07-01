@@ -4,7 +4,7 @@ namespace AndroidIconicsSample.Adapter
   using Android.Support.V7.Widget;
   using Android.Views;
   using Android.Widget;
-  using Com.Mikepenz.Iconics.View;
+  using Mikepenz.Iconics.View;
 
   public class IconAdapter : RecyclerView.Adapter
   {
@@ -17,7 +17,7 @@ namespace AndroidIconicsSample.Adapter
       this.rowLayout = rowLayout;
     }
 
-    public void setIcons(List<string> icons)
+    public void SetIcons(List<string> icons)
     {
       this.icons.AddRange(icons);
       this.NotifyItemRangeChanged(0, icons.Count - 1);
