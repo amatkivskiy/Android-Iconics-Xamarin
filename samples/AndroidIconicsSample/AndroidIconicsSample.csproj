@@ -18,7 +18,7 @@
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
-    <ReleaseVersion>1.2.0</ReleaseVersion>
+    <ReleaseVersion>1.2.1</ReleaseVersion>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -48,9 +48,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="material-drawer-3.0.7">
-      <HintPath>Libs\material-drawer-3.0.7.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>..\..\solutions\packages\Xamarin.Android.Support.v4.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
@@ -62,6 +59,9 @@
     </Reference>
     <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
       <HintPath>..\..\solutions\packages\Xamarin.Android.Support.v7.RecyclerView.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="material-drawer-3.0.9">
+      <HintPath>Libs\material-drawer-3.0.9.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

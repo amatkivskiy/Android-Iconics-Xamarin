@@ -3,7 +3,7 @@
 	<metadata>
 		<!-- prefer rather Mikepenz.Iconics.Xamarin.Android then this id in future -->
 		<id>Mikepenz.Android.Iconics.Xamarin.Binding</id>
-		<version>1.2.0</version>
+		<version>1.2.1</version>
 		<title>Android-Iconics</title>
 		<authors>Andriy Matkivskiy</authors>
 		<owners>amatkivskiy</owners>
@@ -16,19 +16,8 @@ Android-Iconics is a library to use (almost) any alternative iconfont in your pr
 http://mikepenz.github.io/Android-Iconics</description>
 		<summary>Xamarin binding for Android Iconics https://github.com/mikepenz/Android-Iconics</summary>
 		<tags>Android Xamarin Icons Material</tags>
-		<releaseNotes>Updated to version 1.2.0.
-			Renamed main namespace to Mikepenz.Iconics.
-			- add new feature to create an IconicsDrawable using text
-			- deprecate the old actionBarSize() method in favor of the new actionBar() method
-			- update libraries (MaterialDrawer, AboutLibraries)
-			- update appCompat libraries 
-			- allow setting size or padding via xml for the IconcisImageView
-			- add api to set rounded corners for the background
-			- add new api methods to set width and height separately
-			- remove iconText method and replace with icon
-			- add new IconicsArrayBuilder to create many drawables with the same style with ease
-			- fix bug with the background and roundedCorners
-			- fix icon not displaying in the button with lolllipop
+		<releaseNotes>Updated to version 1.2.1.
+			- clean solution for the textAllCaps issue
 		</releaseNotes>
 		<dependencies>
 			<dependency id="Xamarin.Android.Support.v4" version="22.2.0.0"/>
@@ -36,7 +25,7 @@ http://mikepenz.github.io/Android-Iconics</description>
 		</dependencies>
 	</metadata>
 	<files>
-		<file src="..\library\bin\Release\android-iconics-1.2.0.dll" target="lib\MonoAndroid\"/>
+		<file src="..\library\bin\Release\android-iconics-1.2.1.dll" target="lib\MonoAndroid\"/>
 		<file src="fonts\google_material_design.ttf" target="content\Assets\fonts\" />
 		<file src="fonts\fontawesome-webfont-4.3.0.ttf" target="content\Assets\fonts\" />
 		<file src="fonts\materialdesignicons-webfont.ttf" target="content\Assets\fonts\" />

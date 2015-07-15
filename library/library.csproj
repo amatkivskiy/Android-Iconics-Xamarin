@@ -10,11 +10,11 @@
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <AssemblyName>android-iconics-1.2.0</AssemblyName>
+    <AssemblyName>android-iconics-1.2.1</AssemblyName>
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
-    <ReleaseVersion>1.2.0</ReleaseVersion>
+    <ReleaseVersion>1.2.1</ReleaseVersion>
     <Java7DocPaths>JavaSrc</Java7DocPaths>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
