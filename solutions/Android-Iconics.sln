@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "library", "library\library.csproj", "{3FB2A58D-1C49-4572-8F18-CE36B7EC108E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "library", "..\library\library.csproj", "{3FB2A58D-1C49-4572-8F18-CE36B7EC108E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidIconicsSample", "samples\AndroidIconicsSample\AndroidIconicsSample.csproj", "{5F7BBEC6-975D-4695-B111-783DD34D56D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidIconicsSample", "..\samples\AndroidIconicsSample\AndroidIconicsSample.csproj", "{5F7BBEC6-975D-4695-B111-783DD34D56D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
