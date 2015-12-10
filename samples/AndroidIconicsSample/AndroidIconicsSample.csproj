@@ -129,11 +129,11 @@
     <AndroidAsset Include="..\..\dev\fonts\meteocons.ttf">
       <Link>Assets\fonts\meteocons.ttf</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\..\dev\fonts\octicons.ttf">
-      <Link>Assets\fonts\octicons.ttf</Link>
-    </AndroidAsset>
     <AndroidAsset Include="..\..\dev\fonts\materialdesignicons-v1.3.41.ttf">
       <Link>Assets\fonts\materialdesignicons-v1.3.41.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\dev\fonts\octicons-v3.2.0.ttf">
+      <Link>Assets\fonts\octicons-v3.2.0.ttf</Link>
     </AndroidAsset>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
