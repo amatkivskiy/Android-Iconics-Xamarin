@@ -69,6 +69,6 @@
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\iconics-1.2.0.aar" />
+    <LibraryProjectZip Include="Jars\iconics-core-2.5.1.aar" />
   </ItemGroup>
 </Project>
