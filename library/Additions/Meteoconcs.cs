@@ -1,4 +1,4 @@
-namespace Mikepenz.Meteocons_typeface_library
+namespace Mikepenz.Fonts
 {
   using System;
   using System.Collections.Generic;

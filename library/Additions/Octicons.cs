@@ -1,4 +1,4 @@
-﻿namespace Mikepenz.Octicons_typeface_library
+﻿namespace Mikepenz.Fonts
 {
   using System;
   using System.Collections.Generic;
