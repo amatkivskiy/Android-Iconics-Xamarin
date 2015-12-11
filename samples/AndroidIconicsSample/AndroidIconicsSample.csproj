@@ -120,9 +120,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\fonts\fontello.ttf" />
-    <AndroidAsset Include="..\..\dev\fonts\fontawesome-webfont-4.3.0.ttf">
-      <Link>Assets\fonts\fontawesome-webfont-4.3.0.ttf</Link>
-    </AndroidAsset>
     <AndroidAsset Include="..\..\dev\fonts\google_material_design.ttf">
       <Link>Assets\fonts\google_material_design.ttf</Link>
     </AndroidAsset>
@@ -134,6 +131,9 @@
     </AndroidAsset>
     <AndroidAsset Include="..\..\dev\fonts\octicons-v3.2.0.ttf">
       <Link>Assets\fonts\octicons-v3.2.0.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\dev\fonts\fontawesome-webfont-v4.5.0.1.ttf">
+      <Link>Assets\fonts\fontawesome-webfont-v4.5.0.1.ttf</Link>
     </AndroidAsset>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
