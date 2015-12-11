@@ -11,7 +11,7 @@
   <attr path="/api/package[@name='com.mikepenz.iconics.typeface']" name="managedName">Mikepenz.Iconics.Typeface</attr>
   <attr path="/api/package[@name='com.mikepenz.iconics.view']" name="managedName">Mikepenz.Iconics.View</attr>
   <attr path="/api/package[@name='com.mikepenz.iconics.utils']" name="managedName">Mikepenz.Iconics.Utils</attr>
-  <attr path="/api/package[@name='com.mikepenz.google_material_typeface_library']" name="managedName">Mikepenz.Google_material_typeface_library</attr>
+<!--  <attr path="/api/package[@name='com.mikepenz.google_material_typeface_library']" name="managedName">Mikepenz.Google_material_typeface_library</attr>-->
 
   <!--  Removed deprecated methods-->
   <remove-node  path="/api/package[@name='com.mikepenz.iconics']/class[@name='IconicsDrawable']/method[@name='actionBarSize' and count(parameter)=0]" />
