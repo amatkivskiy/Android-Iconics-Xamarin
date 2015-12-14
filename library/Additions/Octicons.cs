@@ -85,8 +85,6 @@
 				return "http://scripts.sil.org/OFL";
 			}
 		}
-		//		+++++++++
-
 
 		public Android.Graphics.Typeface GetTypeface(Android.Content.Context context)
 		{
