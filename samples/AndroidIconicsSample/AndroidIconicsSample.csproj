@@ -96,9 +96,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\fonts\fontello.ttf" />
-    <AndroidAsset Include="..\..\dev\fonts\google_material_design.ttf">
-      <Link>Assets\fonts\google_material_design.ttf</Link>
-    </AndroidAsset>
     <AndroidAsset Include="..\..\dev\fonts\meteocons.ttf">
       <Link>Assets\fonts\meteocons.ttf</Link>
     </AndroidAsset>
@@ -112,6 +109,9 @@
       <Link>Assets\fonts\fontawesome-webfont-v4.5.0.1.ttf</Link>
     </AndroidAsset>
     <AndroidAsset Include="Assets\fonts\materialdrawerfont.ttf" />
+    <AndroidAsset Include="..\..\dev\fonts\google-material-font-v2.1.0.1.ttf">
+      <Link>Assets\fonts\google-material-font-v2.1.0.1.ttf</Link>
+    </AndroidAsset>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>

@@ -58,6 +58,7 @@
     <Compile Include="Additions\FontAwesome.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Additions\GoogleMaterial.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Additions\AboutAdditions.txt" />
