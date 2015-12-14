@@ -91,7 +91,8 @@
 				try {
 					_typeface = Android.Graphics.Typeface.CreateFromAsset(context.Assets, "fonts/" + TtfFile);
 				} catch(Exception e) {
-					Log.Error("Iconics", "Failed to load font from Assets: " + e.Message);
+					var message = string.Format("Failed to load font file : {0} for {1} typeface. Reason: {2}", TtfFile, FontName, e.Message); 
+					Log.Error("Iconics", message);
 				}
 			}
 			return _typeface;

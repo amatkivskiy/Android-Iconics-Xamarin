@@ -8,11 +8,11 @@
 
   public class Octicons : Java.Lang.Object, ITypeface
   {
-	private const string TtfFile = "octicons-v3.2.0.ttf";
+		const string TtfFile = "octicons-v3.2.0.ttf";
 
-    private static Android.Graphics.Typeface _typeface = null;
+    static Android.Graphics.Typeface _typeface = null;
 
-    private static Dictionary<string, Java.Lang.Character> _chars;
+    static Dictionary<string, Java.Lang.Character> _chars;
 
     public IIcon GetIcon(string key)
     {
@@ -27,6 +27,39 @@
       }
     }
 
+		public string MappingPrefix
+		{
+			get
+			{
+				return "oct";
+			}
+		}
+
+		public string FontName
+		{
+			get
+			{
+				return "Octicons";
+			}
+		}
+
+		public string Version
+		{
+			get
+			{
+				return "3.2.0";
+			}
+		}
+
+		public int IconCount
+		{
+			get
+			{
+				return _chars.Count;
+			}
+		}
+
+
     public ICollection<string> Icons
     {
       get
@@ -34,6 +67,48 @@
         return Icon.Values.Select(icon => icon.Name).ToList();
       }
     }
+
+		public string Author
+		{
+			get
+			{
+				return "GitHub";
+			}
+		}
+
+		public string Url
+		{
+			get
+			{
+				return "https://github.com/github/octicons";
+			}
+		}
+
+		public string Description
+		{
+			get
+			{
+				return "GitHub's icon font https://octicons.github.com/";
+			}
+		}
+
+		public string License
+		{
+			get
+			{
+				return "SIL OFL 1.1";
+			}
+		}
+
+		public string LicenseUrl
+		{
+			get
+			{
+				return "http://scripts.sil.org/OFL";
+			}
+		}
+		//		+++++++++
+
 
     public Android.Graphics.Typeface GetTypeface(Android.Content.Context context)
     {
@@ -45,90 +120,19 @@
         }
         catch (Exception e)
         {
-          Log.Error("Iconics", "Failed to load font from Assets: " + e.Message);
+					var message = string.Format("Failed to load font file : {0} for {1} typeface. Reason: {2}", TtfFile, FontName, e.Message); 
+					Log.Error("Iconics", message);
         }
       }
       return _typeface;
     }
 
-    public string Author
-    {
-      get
-      {
-        return "GitHub";
-      }
-    }
-
-    public string Description
-    {
-      get
-      {
-        return "GitHub's icon font https://octicons.github.com/";
-      }
-    }
-
-    public string FontName
-    {
-      get
-      {
-        return "Octicons";
-      }
-    }
-
-    public int IconCount
-    {
-      get
-      {
-        return _chars.Count;
-      }
-    }
-
-    public string License
-    {
-      get
-      {
-        return "SIL OFL 1.1";
-      }
-    }
-
-    public string LicenseUrl
-    {
-      get
-      {
-        return "http://scripts.sil.org/OFL";
-      }
-    }
-
-    public string MappingPrefix
-    {
-      get
-      {
-        return "oct";
-      }
-    }
-
-    public string Url
-    {
-      get
-      {
-        return "https://github.com/github/octicons";
-      }
-    }
-
-    public string Version
-    {
-      get
-      {
-        return "3.2.0";
-      }
-    }
-
     public class Icon : Java.Lang.Object, IIcon
     {
-      private readonly char character;
-      private readonly string name;
+      readonly char character;
+      readonly string name;
 
-      private static ITypeface _typeFace;
+      static ITypeface _typeFace;
 
       public Icon(char character, string name)
       {
