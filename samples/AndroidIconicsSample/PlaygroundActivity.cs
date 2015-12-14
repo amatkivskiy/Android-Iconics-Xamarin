@@ -1,4 +1,4 @@
-using Mikepenz.Fonts;
+using Mikepenz.Typeface;
 
 namespace AndroidIconicsSample
 {

@@ -6,7 +6,7 @@ namespace AndroidIconicsSample
   using Android.App;
   using Android.Runtime;
   using AndroidIconicsSample.Typeface;
-	using Mikepenz.Fonts;
+	using Mikepenz.Typeface;
 	using Mikepenz.Iconics;
 
   [Application(Theme = "@style/AppTheme")]

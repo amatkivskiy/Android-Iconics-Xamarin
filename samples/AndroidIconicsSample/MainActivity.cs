@@ -17,7 +17,7 @@ namespace AndroidIconicsSample
   using Mikepenz.MaterialDrawer.Models.Interfaces;
 	using Android.Text;
 	using System;
-	using Mikepenz.Fonts;
+	using Mikepenz.Typeface;
   using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 	[Activity(Name = "com.amatkivskiy.iconics.sample.MainActivity", MainLauncher = true, Label = "@string/app_name")]
