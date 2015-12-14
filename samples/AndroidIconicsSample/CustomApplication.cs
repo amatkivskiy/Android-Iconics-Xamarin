@@ -20,6 +20,7 @@ namespace AndroidIconicsSample
       Iconics.RegisterFont(new CommunityMaterial());
       Iconics.RegisterFont(new CustomFont());
 			Iconics.RegisterFont(new FontAwesome());
+			Iconics.RegisterFont(new GoogleMaterial());
 
 			//Generic font creation process
 			GenericFont gf2 = new GenericFont("GenericFont", "SampleGenericFont", "gmf", "fonts/materialdrawerfont.ttf");

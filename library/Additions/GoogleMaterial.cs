@@ -131,7 +131,7 @@
 
 			public ITypeface Typeface {
 				get {
-					return _typeFace ?? (_typeFace = new FontAwesome());
+					return _typeFace ?? (_typeFace = new GoogleMaterial());
 				}
 			}
 
