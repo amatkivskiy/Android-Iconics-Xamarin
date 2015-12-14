@@ -1,3 +1,5 @@
+using Mikepenz.Fonts;
+
 namespace AndroidIconicsSample
 {
   using Android.App;
@@ -7,9 +9,8 @@ namespace AndroidIconicsSample
   using Android.Text.Style;
   using Android.Widget;
   using Mikepenz.Iconics;
-  using Mikepenz.Iconics.Typeface;
 
-  [Activity]
+	[Activity(Name = "com.amatkivskiy.iconics.sample.PlaygroundActivity")]
   public class PlaygroundActivity : Activity
   {
     protected override void OnCreate(Bundle savedInstanceState)
@@ -40,7 +41,7 @@ namespace AndroidIconicsSample
 
       //Set the icon of an ImageView (or something else) as bitmap
       ImageView iv3 = this.FindViewById<ImageView>(Resource.Id.test3);
-      iv3.SetImageBitmap(new IconicsDrawable(this, new FontAwesome(), FontAwesome.Icon.FawAndroid).Color(Color.ParseColor("#deFF0000")).ToBitmap());
+      iv3.SetImageBitmap(new IconicsDrawable(this, FontAwesome.Icon.FawAndroid).Color(Color.ParseColor("#deFF0000")).ToBitmap());
 
       //Show how to style the text of an existing button (NOT WORKING AT THE MOMENT)
       Button b4 = this.FindViewById<Button>(Resource.Id.test4);
