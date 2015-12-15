@@ -6,5 +6,14 @@
 
 Xamarin bindings for [Android-Iconics](https://github.com/mikepenz/Android-Iconics)  library.
 
+Typefaces: 
+- [Meteoconcs](https://github.com/amatkivskiy/Android-Iconics-Xamarin/blob/dev/library/Additions/Meteoconcs.cs);
+- [Octicons](https://github.com/amatkivskiy/Android-Iconics-Xamarin/blob/dev/library/Additions/Octicons.cs)
+- [CommunityMaterial](https://github.com/amatkivskiy/Android-Iconics-Xamarin/blob/dev/library/Additions/CommunityMaterial.cs)
+- [FontAwesome](https://github.com/amatkivskiy/Android-Iconics-Xamarin/blob/dev/library/Additions/FontAwesome.cs)
+- [GoogleMaterial](https://github.com/amatkivskiy/Android-Iconics-Xamarin/blob/dev/library/Additions/GoogleMaterial.cs)
+
+Are integrated into the library.
+
 # Download
 [NuGet Package](https://www.nuget.org/packages/Mikepenz.Android.Iconics.Xamarin.Binding/)
