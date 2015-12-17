@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <Java7DocPaths>JavaSrc</Java7DocPaths>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
